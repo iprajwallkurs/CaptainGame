@@ -40,16 +40,16 @@ class MainActivity : ComponentActivity() {
 
     fun CaptainGame(){
 
-        //val treasuresFound = remember { mutableStateOf(0) }
-        val treasuresFound by remember { mutableStateOf(0) } //no need to add .value in Text
+        val treasuresFound = remember { mutableStateOf(0) }
+        //val treasuresFound by remember { mutableStateOf(0) } //no need to add .value in Text
         val direction = remember { mutableStateOf("North") }
         val stormOrTresure = remember { mutableStateOf(" ") }
 
         Column {
             Spacer(modifier = Modifier.height(16.dp))
 
-            //Text(text = "Treasures Found : ${treasuresFound.value}")
-            Text(text = "Treasures Found : ${treasuresFound}")
+            Text(text = "Treasures Found : ${treasuresFound.value}")
+            //Text(text = "Treasures Found : ${treasuresFound}")
             Text(text = "Current Direction : ${direction.value}")
             Text(text = "${stormOrTresure.value}")
 
