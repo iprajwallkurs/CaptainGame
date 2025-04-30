@@ -47,7 +47,6 @@ class MainActivity : ComponentActivity() {
 
         Column {
             Spacer(modifier = Modifier.height(16.dp))
-
             Text(text = "Treasures Found : ${treasuresFound.value}")
             //Text(text = "Treasures Found : ${treasuresFound}")
             Text(text = "Current Direction : ${direction.value}")
@@ -102,8 +101,5 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
-
-
 }
 
